@@ -1,0 +1,121 @@
+lang: javascript
+snippets:
+  - name: React
+    prefix: react
+    body: |-
+      import React from 'react';
+
+      export const $1 = () => (
+        <div>
+        </div>
+      );
+  - name: React-Class
+    prefix: reactclass
+    body: |-
+      import React from 'react';
+
+      export class $1 extends React.Component {
+        render() {
+          return (
+            <div>
+
+            </div>
+          );
+        }
+      }
+  - name: React-Compose
+    prefix: reactcompose
+    body: |-
+      import React from 'react';
+      import PropTypes from 'prop-types';
+
+      import { compose } from 'recompose';
+
+      export const enhance = compose();
+
+      export const $1Base = () => (
+        <div>
+        </div>
+      );
+
+      $1.propTypes = {
+
+      };
+
+      export const $1 = enhance($1Base);
+  - name: React-Intl-Import
+    prefix: reactintl
+    body: 'import { FormattedMessage } from ''react-intl'';'
+  - name: React-Intl-Message
+    prefix: FormattedMessage
+    body: <FormattedMessage id="$1" defaultMessage="$2" />
+  - name: import react
+    prefix: imreact
+    body: import React from 'react';
+  - name: import style.css
+    prefix: imst
+    body: import styles from './style.css';
+  - name: connect
+    prefix: connect
+    body: 'connect(mapStateToProps, mapDispatchToProps)($1)'
+  - name: mapState
+    prefix: mapState
+    body: |-
+      import { connect } from 'react-redux';
+
+      const mapStateToProps = $1;
+      const mapDispatchToProps = { $2 };
+  - name: redux
+    prefix: redux
+    body: |-
+      export const $1_REQUEST = '$1_REQUEST';
+      export const $1_SUCCESS = '$1_SUCCESS';
+      export const $1_FAILURE = '$1_FAILURE';
+  - name: react className
+    prefix: cn
+    body: className=
+  - name: react div
+    prefix: <div
+    body: <div className=
+  - name: reactmaf
+    prefix: reactmaf
+    body: |-
+      import React from 'react';
+
+      import { withStyles } from '@material-ui/core/styles';
+
+      const styles = () => ({
+        content: { padding: '20px' }
+      });
+
+      export const $1Base = ({ classes, children }) => (
+        <div className={classes.content}>
+          {children}
+        </div>
+      );
+
+      export const $1 = withStyles(styles)($1Base);
+  - name: reactmac
+    prefix: reactmac
+    body: |-
+      import React from 'react';
+
+      import { withStyles } from '@material-ui/core/styles';
+
+      const styles = () => ({
+        content: { padding: '20px' }
+      });
+
+      export class $1Base extends React.Component {
+        render() {
+          const { classes, children } = this.props;
+
+          return (
+            <div className={classes.content}>
+              {children}
+            </div>
+          );
+        }
+      }
+
+      export const $1 = withStyles(styles)($1Base);

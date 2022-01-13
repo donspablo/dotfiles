@@ -1,0 +1,63 @@
+lang: javascript
+snippets:
+  - name: Constructor
+    prefix: constructor
+    body: constructor
+  - name: AssertEqual
+    prefix: assert
+    body: 'assert.strictEqual($1, $2, $3);'
+  - name: AssertNotUndefined
+    prefix: defined
+    body: 'assert.notStrictEqual(typeof $1, ''undefined'', ''$1 should be defined'');'
+  - name: Iterate map
+    prefix: imap
+    body: imap(_ => _.$1)
+  - name: Angular
+    prefix: angular
+    body: |-
+      export default {
+        scope: {},
+        controller: ($scope) => {
+          $1
+        }
+      };
+  - name: Use Strict
+    prefix: us
+    body: '''use strict'';'
+  - name: read file
+    prefix: readfile
+    body: 'const data = fs.readFileSync($1, ''utf-8'');$2'
+  - name: stringify
+    prefix: str
+    body: 'JSON.stringify($1, null, 2)$2'
+  - name: type-codegen tcomb
+    prefix: cgtcomb
+    body: console.log(require('type-codegen/packages/tcomb-codegen').generateCode($1))
+  - name: listen port
+    prefix: listen
+    body: |-
+      listen($1, err => {
+        if (err) {
+          throw err;
+        }
+
+        console.log('listening localhost:$1');
+      });
+  - name: execa
+    prefix: execa
+    body: 'await execa(''$1'', [], { stdio: ''inherit'' });'
+  - name: execa-silent
+    prefix: execasilent
+    body: 'await execa(''$1'', []);'
+  - name: execa-stdout
+    prefix: execaout
+    body: 'await execa.stdout(''$1'', []);'
+  - name: argv
+    prefix: argv
+    body: 'const argv = require(''minimist'')(process.argv.slice(2), { string: ''_'' });'
+  - name: qsparse
+    prefix: qsparse
+    body: 'const search = qs.parse(location.search, { ignoreQueryPrefix: true });'
+  - name: qsstringify
+    prefix: qsstringify
+    body: 'qs.stringify({ $1 }, { addQueryPrefix: true })'

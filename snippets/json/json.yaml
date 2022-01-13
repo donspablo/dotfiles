@@ -1,0 +1,22 @@
+lang: json
+snippets:
+  - name: private-package
+    prefix: privpackage
+    body: |-
+      {
+        "name": "$1",
+        "version": "0.0.0",
+        "private": true
+      }
+  - name: my-package
+    prefix: mypackage
+    body: |-
+      {
+        "name": "$1",
+        "version": "0.0.0",
+        "description": "<description>",
+        "main": "index.js",
+        "author": "donPabloNow <ewndnine@gmail.com>",
+        "license": "MIT",
+        "repository": "https://github.com/donPabloNow/$1"
+      }

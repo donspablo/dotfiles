@@ -1,0 +1,74 @@
+lang: javascript
+snippets:
+  - name: require
+    prefix: re
+    body: 'const ${1} = require(''${1}'');'
+  - name: require lodash
+    prefix: relo
+    body: 'const ${1} = require(''lodash/${1}'');'
+  - name: import lodash
+    prefix: imlo
+    body: 'import ${1} from ''lodash/${1}'';'
+  - name: require lodash fp
+    prefix: relof
+    body: 'const ${1} = require(''lodash/fp/${1}'');'
+  - name: import lodash fp
+    prefix: imlof
+    body: 'import ${1} from ''lodash/fp/${1}'';'
+  - name: require asymmetrical
+    prefix: rea
+    body: 'const ${1} = require(''${2}'');'
+  - name: require fs
+    prefix: refs
+    body: const fs = require('fs');
+  - name: import fs
+    prefix: imfs
+    body: import fs from 'fs';
+  - name: import
+    prefix: im
+    body: import $1 from '$1';
+  - name: import asymmetrical
+    prefix: ima
+    body: import $1 from '$2';
+  - name: export
+    prefix: ex
+    body: export const $1;
+  - name: pify
+    prefix: pify
+    body: 'const { promisify: pify } = require(''util'');'
+  - name: require superagent
+    prefix: resu
+    body: const request = require('superagent');
+  - name: import superagent
+    prefix: imsu
+    body: import request from 'superagent';
+  - name: require Ramda
+    prefix: reramda
+    body: const R = require('ramda');
+  - name: import ramda
+    prefix: imramda
+    body: import R from 'ramda';
+  - name: minimal delay
+    prefix: delay
+    body: const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+  - name: require belt-tools
+    prefix: rebe
+    body: 'const ${1} = require(''belt-tools/modules/${1}'');'
+  - name: import belt-tools
+    prefix: imbe
+    body: 'import ${1} from ''belt-tools/modules/${1}'';'
+  - name: import material
+    prefix: imma
+    body: 'import ${1} from ''@material-ui/core/${1}'';'
+  - name: import material styles
+    prefix: immawithstyle
+    body: 'import { withStyles } from ''@material-ui/core/styles'';'
+  - name: import material icon
+    prefix: immaicon
+    body: 'import ${1}Icon from ''@material-ui/icons/${1}'';'
+  - name: immastyle
+    prefix: immastyle
+    body: |-
+      const styles = () => ({
+        $1: $2
+      })
