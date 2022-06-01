@@ -55,7 +55,7 @@
     "babel-core": "^6.26.3",
     "belt-tools": "^0.0.2",
     "builtin-modules": "^3.0.0",
-    "chalk": "^2.3.0",
+    "chalk": "^2.4.2",
     "dedent": "^0.7.0",
     "dotenv-stringify": "^1.0.0",
     "git-url-parse": "^11.1.2",
