@@ -58,7 +58,7 @@
     "chalk": "^2.3.0",
     "dedent": "^0.7.0",
     "dotenv-stringify": "^1.0.0",
-    "git-url-parse": "^11.1.2",
+    "git-url-parse": "^11.6.0",
     "globby": "^8.0.1",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.13",
